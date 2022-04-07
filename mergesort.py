@@ -39,11 +39,13 @@ def merge_sort(sort_list): #sort_list es el algoritmo que vamos a arreglar
     return sort_list
 
 #Scrypt del programa    
-Arreglo = []
 #range(inicio, final, salto)
-for numeroaInsertar in range(0,100,1):
-    Arreglo.append(random.randint(0,1000))
-    #Arreglo.append(numeroaInsertar) #Appened nos ayuda a insertar dentro de la lista
+'''for numeroaInsertar in range(0,1000,1):
+    #Arreglo.append(random.randint(0,10000000))
+    Arreglo.append(numeroaInsertar) #Appened nos ayuda a insertar dentro de la lista
+'''
+from random import sample
+Arreglo=sample(range(0,8000000),8000000) 
 
 tiempoInicialdeEjecucionDelmerge = time()
 Arreglo = merge_sort(Arreglo) #mandamos a llamar lo que es el algoritmo de ordenamiento 
